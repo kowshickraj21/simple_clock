@@ -19,7 +19,7 @@ ul{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 5px 5px 10px black;
 }
 button{
     border: none;
@@ -31,14 +31,13 @@ button{
 button:hover{
     text-decoration: underline;
 }
-.container{
-    background-color: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+.clock{
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+    box-shadow: 5px 5px 30px black;
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    height: 150px;
-    width: 70%;
+    height: 250px;
+    width: 50%;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -51,24 +50,31 @@ span{
     font-weight: 800;
     color: white;
     margin: 5px;
-}
-.container::after{
-    content: "";
-    height: 100px;
-    background: red;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}   
+#hrs::after{
+    content: "Hours";
+    font-size: 14px;
     position: absolute;
-    width: 10%;
-    right: -50px;
-    top: -50px;
-    border-radius: 50px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.container::before{
-    content: "";
-    height: 100px;
-    background: blue;
+#min::after{
+    content: "Minutes";
+    font-size: 14px;
     position: absolute;
-    width: 10%;
-    left: -50px;
-    bottom: -50px;
-    border-radius: 10px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#sec::after{
+    content: "Seconds";
+    font-size: 14px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
