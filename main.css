@@ -1,6 +1,6 @@
 body{
     background-color: #8d5185;
-    background-image: linear-gradient(315deg, #6b1f80 0% , #67428f 50%, #5676e1 90% );
+    background-image: linear-gradient(315deg, #4a079c 10% , #6028a5 57%, #6c33b0 90% );
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -15,13 +15,12 @@ ul{
     margin-left: 5%;
     margin-right: 5%;
     padding: 30px;
-    background-color: rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     box-shadow: 5px 5px 10px black;
 }
-button{
+.nav-bar button{
     border: none;
     font-size: 200%;
     font-weight: 800;
@@ -31,7 +30,7 @@ button{
 button:hover{
     text-decoration: underline;
 }
-.clock{
+.container{
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(40px);
     box-shadow: 5px 5px 30px black;
@@ -50,6 +49,7 @@ span{
     font-weight: 800;
     color: white;
     margin: 5px;
+    margin-bottom: 50px;
     display: inline-block;
     text-align: center;
     position: relative;
@@ -77,4 +77,20 @@ span{
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
+}
+#counter{
+    display: none;
+    margin: auto;
+    position: absolute;
+    bottom: 20px;
+    height: 40px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:  500;
+    font-size: 15px;
+}
+#counter:hover{
+    text-decoration: none;
 }
